@@ -3,7 +3,7 @@
  *
  * Setup:
  *   1. Create a Google Sheet with these column headers in row 1:
- *        timestamp | name | email | company | project | budget | page
+ *        timestamp | name | phone | email | website | project | page
  *   2. Extensions → Apps Script. Replace the file contents with this.
  *   3. Deploy → New deployment → Web app
  *        - Execute as: Me
@@ -18,10 +18,10 @@ function doPost(e) {
     sheet.appendRow([
       new Date(),
       p.name    || '',
+      p.phone   || '',
       p.email   || '',
-      p.company || '',
+      p.website || '',
       p.project || '',
-      p.budget  || '',
       p.page    || '',
     ]);
     return ContentService

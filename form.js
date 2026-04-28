@@ -20,7 +20,7 @@
    success after 600ms so the UX flow is testable locally.
    ============================================================ */
 (() => {
-  const SHEETS_ENDPOINT = ""; // ← paste your Apps Script /exec URL here
+  const SHEETS_ENDPOINT = "https://script.google.com/macros/s/AKfycbzojuArRlgIuvgIGxv7JJLev1bPTMEvdSAp0497z6HITzOramZvzwf1D4fnop4PhvZA/exec";
 
   const overlay = document.getElementById("intake");
   const form    = document.getElementById("intake-form");
@@ -48,6 +48,7 @@
     form.classList.remove("is-leaving");
     successEl.hidden = true;
     successEl.classList.remove("is-shown");
+    overlay.classList.remove("is-done");
     requestAnimationFrame(() => {
       const first = form.querySelector("input, textarea, select");
       first?.focus();
@@ -61,7 +62,6 @@
     if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
   };
 
-  // Wire every CTA marked data-open-form
   document.querySelectorAll("[data-open-form]").forEach((el) => {
     el.addEventListener("click", (e) => {
       e.preventDefault();
@@ -71,8 +71,8 @@
 
   // Close interactions
   overlay.addEventListener("click", (e) => {
-    if (e.target.matches("[data-close-form]")) close();
-    if (e.target === overlay) close();
+    if (e.target.closest("[data-close-form]")) close();
+    else if (e.target === overlay) close();
   });
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && overlay.classList.contains("is-open")) close();
@@ -93,6 +93,11 @@
       email.setAttribute("aria-invalid", "true");
       ok = false;
     }
+    const phone = form.querySelector("[name=phone]");
+    if (phone && phone.value && phone.value.replace(/\D/g, "").length < 7) {
+      phone.setAttribute("aria-invalid", "true");
+      ok = false;
+    }
     return ok;
   };
 
@@ -110,10 +115,10 @@
 
     const payload = {
       name:    form.name.value.trim(),
+      phone:   form.phone.value.trim(),
       email:   form.email.value.trim(),
-      company: form.company.value.trim(),
+      website: form.website.value.trim(),
       project: form.project.value.trim(),
-      budget:  form.budget.value,
       page:    location.href,
       ts:      new Date().toISOString(),
     };
@@ -134,10 +139,11 @@
         if (!data.ok) throw new Error(data.error || "Submission failed");
       }
 
-      // Crossfade: fade form out, then fade success in
+      // Crossfade: fade form out, then take over with full-screen success
       form.classList.add("is-leaving");
       await new Promise((r) => setTimeout(r, 320));
       form.hidden = true;
+      overlay.classList.add("is-done");
       successEl.hidden = false;
       // Force a reflow so the transition picks up the from-state
       void successEl.offsetWidth;
