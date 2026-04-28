@@ -376,19 +376,29 @@ if ("IntersectionObserver" in window && lazyVideos.length) {
         if (entry.isIntersecting) {
           if (!vid.src) {
             vid.src = vid.dataset.lazyvideo;
-            // preload="none" prevents any fetch until play() — but stills
-            // never call play(). Lift the preload + load() so a frame renders.
             if (vid.preload === "none") {
-              vid.preload = isStill ? "metadata" : "auto";
+              vid.preload = isStill ? "auto" : "auto";
               vid.load();
             }
           }
           if (isStill) {
-            vid.pause();
+            // Force a first-frame paint by briefly playing, then pause.
+            // preload alone is unreliable across browsers/CDNs.
+            const freeze = () => {
+              try { vid.pause(); } catch (_) {}
+            };
+            const tryFreeze = () => {
+              vid.play().then(() => {
+                // Pause on the next tick so a frame is composited first.
+                requestAnimationFrame(() => requestAnimationFrame(freeze));
+              }).catch(() => {});
+            };
+            if (vid.readyState >= 2) tryFreeze();
+            else vid.addEventListener("loadeddata", tryFreeze, { once: true });
           } else {
             const playPromise = vid.play();
             if (playPromise && typeof playPromise.catch === "function") {
-              playPromise.catch(() => { /* autoplay may be blocked — silently ignore */ });
+              playPromise.catch(() => {});
             }
           }
         } else if (!isStill) {
