@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" role="img" aria-label="MetIQ">
+  <defs>
+    <linearGradient id="metiq-silver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#FFFFFF"/>
+      <stop offset="40%"  stop-color="#E8E8EC"/>
+      <stop offset="100%" stop-color="#6E6E78"/>
+    </linearGradient>
+    <linearGradient id="metiq-shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#FFFFFF"/>
+      <stop offset="50%"  stop-color="#C8C8CE"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <text x="0" y="46"
+        font-family="'Funnel Display','Sora',system-ui,sans-serif"
+        font-weight="800"
+        font-size="48"
+        letter-spacing="-2.2"
+        fill="#FFFFFF">Met<tspan fill="url(#metiq-silver)">IQ</tspan></text>
+</svg>

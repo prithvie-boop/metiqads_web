@@ -1,0 +1,14 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Source camera files (we ship the transcoded .mp4s only)
+videos/bts/*.MOV
+
+# Local server / build artefacts
+node_modules/
+.cache/
+*.log

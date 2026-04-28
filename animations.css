@@ -1,0 +1,160 @@
+/* ============================================================
+   MetIQ — animations.css
+   ------------------------------------------------------------
+   Keyframes, reveal utilities, and reduced-motion fallback.
+   The reveal classes are toggled by animations.js via
+   IntersectionObserver — elements start hidden and resolve
+   on screen.
+   ============================================================ */
+
+
+/* ─── Keyframes ────────────────────────────────────────────── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 12px var(--primary); transform: scale(1); }
+  50%      { box-shadow: 0 0 22px var(--primary); transform: scale(1.15); }
+}
+
+@keyframes gradient-pan {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes marquee-x {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50%      { transform: translate3d(0, -8px, 0); }
+}
+
+
+/* ─── Reveal utility ───────────────────────────────────────── */
+/* Default state — hidden until the observer adds .is-in. */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out);
+  will-change: opacity, transform;
+}
+[data-reveal="up"]    { transform: translateY(20px); }
+[data-reveal="down"]  { transform: translateY(-20px); }
+[data-reveal="left"]  { transform: translateX(-24px); }
+[data-reveal="right"] { transform: translateX(24px); }
+[data-reveal="scale"] { transform: scale(0.96); }
+[data-reveal="blur"]  { filter: blur(8px); }
+
+[data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+
+/* Stagger children — delay each child progressively. The
+   parent gets [data-stagger]; children inherit timing. */
+[data-stagger] > [data-reveal] {
+  transition-delay: calc(var(--i, 0) * 60ms);
+}
+
+
+/* ─── Hero text reveal (line-by-line on load) ─────────────── */
+.hero h1 .line {
+  display: block;
+  overflow: hidden;
+}
+.hero h1 .line > span {
+  display: inline-block;
+  transform: translateY(110%);
+  animation: line-up 900ms var(--ease-out) forwards;
+}
+.hero h1 .line:nth-child(1) > span { animation-delay: 80ms; }
+.hero h1 .line:nth-child(2) > span { animation-delay: 200ms; }
+.hero h1 .line:nth-child(3) > span { animation-delay: 320ms; }
+
+@keyframes line-up {
+  to { transform: translateY(0); }
+}
+
+.hero__topbar,
+.hero__eyebrow,
+.hero .lead,
+.hero__cta,
+.hero__bottom {
+  opacity: 0;
+  animation: fade-up 800ms var(--ease-out) forwards;
+}
+.hero__topbar  { animation-delay: 0ms; }
+.hero__eyebrow { animation-delay: 100ms; }
+.hero .lead    { animation-delay: 480ms; }
+.hero__cta     { animation-delay: 580ms; }
+.hero__bottom  { animation-delay: 720ms; }
+
+.hero__reel {
+  opacity: 0;
+  animation: fade-up 1000ms var(--ease-out) 700ms forwards;
+}
+
+
+/* ─── Caret blink (used after numbers etc.) ────────────────── */
+.caret {
+  display: inline-block;
+  width: 2px;
+  height: 0.9em;
+  margin-left: 4px;
+  background: var(--primary);
+  vertical-align: -0.05em;
+  animation: blink 1.1s steps(2) infinite;
+}
+
+
+/* ─── Float utility ────────────────────────────────────────── */
+.float-slow { animation: float-slow 6s var(--ease-in-out) infinite; }
+
+
+/* ─── Reduced-motion respect ───────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+  .hero h1 .line > span { transform: none !important; }
+  .hero__topbar, .hero__eyebrow, .hero .lead, .hero__cta, .hero__bottom, .hero__reel { opacity: 1 !important; animation: none !important; }
+  .marquee__track { animation: none !important; }
+}

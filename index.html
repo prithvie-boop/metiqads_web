@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>MetIQ Ad films, performance creative & AI content systems</title>
+ <meta name="description" content="MetIQ builds ad films, performance creative, and AI content systems engineered for measurable outcomes lower CAC, higher ROAS, more qualified leads." />
+ <meta name="theme-color" content="#0F0D0C" />
+
+ <!-- favicon -->
+ <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='0' y2='1'><stop offset='0%25' stop-color='%23FFFFFF'/><stop offset='100%25' stop-color='%237A7A82'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='%23000'/><text x='50%25' y='58%25' font-family='system-ui' font-size='17' font-weight='800' fill='url(%23g)' text-anchor='middle' dominant-baseline='middle'>M</text></svg>" />
+
+ <!-- fonts: display + sans + serif italic + mono -->
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+ <!-- styles -->
+ <link rel="stylesheet" href="styles.css" />
+ <link rel="stylesheet" href="animations.css" />
+</head>
+<body class="grain">
+
+ <!-- scroll progress -->
+ <div class="scroll-progress" aria-hidden="true"><div class="scroll-progress__bar"></div></div>
+
+ <!-- ───── nav ───── -->
+ <header class="nav">
+ <div class="container nav__inner">
+ <a href="#top" class="brand" aria-label="MetIQ">
+ <svg class="brand__wordmark" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+ <defs>
+ <linearGradient id="brandSilver" x1="0" y1="0" x2="0" y2="1">
+ <stop offset="0%" stop-color="#FFFFFF"/>
+ <stop offset="40%" stop-color="#E8E8EC"/>
+ <stop offset="100%" stop-color="#6E6E78"/>
+ </linearGradient>
+ </defs>
+ <text x="0" y="46" font-family="Funnel Display,Sora,system-ui,sans-serif" font-weight="800" font-size="48" letter-spacing="-2.2" fill="#FFFFFF">Met<tspan fill="url(#brandSilver)">IQ</tspan></text>
+ </svg>
+ </a>
+
+ <nav aria-label="Primary">
+ <ul class="nav__links">
+ <li><a href="#what-we-do">What we do</a></li>
+ <li><a href="#work">Work</a></li>
+ <li><a href="#bts">BTS</a></li>
+ <li><a href="#process">Process</a></li>
+ <li><a href="#team">Team</a></li>
+ <li><a href="#lens">Lens</a></li>
+ </ul>
+ </nav>
+
+ <div class="nav__cta">
+ <a href="#talk" class="btn btn--primary">Talk to MetIQ</a>
+ <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+ <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round" />
+ </svg>
+ </button>
+ </div>
+ </div>
+ </header>
+
+ <main id="top">
+
+ <!-- ───── hero ───── -->
+ <section class="hero" aria-labelledby="hero-heading">
+ <video class="hero__bg-video" muted loop playsinline preload="auto" autoplay aria-hidden="true">
+ <source src="videos/bts/DSC_3933.mp4" type="video/mp4" />
+ </video>
+ <div class="hero__bg-vignette" aria-hidden="true"></div>
+ <div class="hero__glow" aria-hidden="true"></div>
+
+ <div class="container container--wide hero__inner">
+
+ <div class="hero__head">
+ <span class="hero__eyebrow mono">PRODUCTION × PERFORMANCE × AI</span>
+ <h1 class="h-display" id="hero-heading">
+ <span class="line"><span>We build ad films, <span class="serif">content</span>,</span></span>
+ <span class="line"><span>and growth systems that drive</span></span>
+ <span class="line"><span><strong>measurable outcomes</strong>.</span></span>
+ </h1>
+ <p class="lead hero__lead">
+ For brands that need more sales, more traffic, more walk-ins, stronger recall, and higher conversions across every <span class="serif text-cream">serious</span> growth industry.
+ </p>
+ <div class="hero__cta">
+ <a href="#talk" class="btn btn--primary btn--lg">
+ Talk to MetIQ <span class="arrow" aria-hidden="true">→</span>
+ </a>
+ <a href="#what-we-do" class="btn btn--ghost btn--lg">See what we build</a>
+ </div>
+ </div>
+
+ </div>
+ </section>
+
+ <!-- ───── cinematic reel coverflow ───── -->
+ <section id="work" class="reel-stage-section" aria-labelledby="reel-stage-heading">
+ <h2 class="sr-only" id="reel-stage-heading">Featured reel</h2>
+
+ <div class="reel-flow">
+ <div class="reel-flow__viewport">
+ <div class="reel-flow__track" data-track>
+ <button class="reel-card" data-i="0" aria-label="Performance Creative">
+ <video class="reel-card__video" data-src="videos/v13.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+ <div class="reel-card__shade" aria-hidden="true"></div>
+ <span class="reel-card__num mono">01</span>
+ </button>
+ <button class="reel-card" data-i="1" aria-label="Brand Shoot">
+ <video class="reel-card__video" data-src="videos/v01.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+ <div class="reel-card__shade" aria-hidden="true"></div>
+ <span class="reel-card__num mono">02</span>
+ </button>
+ <button class="reel-card" data-i="2" aria-label="On Set">
+ <video class="reel-card__video" data-src="videos/v11.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+ <div class="reel-card__shade" aria-hidden="true"></div>
+ <span class="reel-card__num mono">03</span>
+ </button>
+ <button class="reel-card" data-i="3" aria-label="Coverage">
+ <video class="reel-card__video" data-src="videos/v14.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+ <div class="reel-card__shade" aria-hidden="true"></div>
+ <span class="reel-card__num mono">04</span>
+ </button>
+ <button class="reel-card" data-i="4" aria-label="Cinematic Cut">
+ <video class="reel-card__video" data-src="videos/v02.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+ <div class="reel-card__shade" aria-hidden="true"></div>
+ <span class="reel-card__num mono">05</span>
+ </button>
+ <button class="reel-card" data-i="5" aria-label="Hook Reel">
+ <video class="reel-card__video" data-src="videos/v03.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+ <div class="reel-card__shade" aria-hidden="true"></div>
+ <span class="reel-card__num mono">06</span>
+ </button>
+ <button class="reel-card" data-i="6" aria-label="Studio Build">
+ <video class="reel-card__video" data-src="videos/v04.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+ <div class="reel-card__shade" aria-hidden="true"></div>
+ <span class="reel-card__num mono">07</span>
+ </button>
+ <button class="reel-card" data-i="7" aria-label="Brand Story">
+ <video class="reel-card__video" data-src="videos/v05.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+ <div class="reel-card__shade" aria-hidden="true"></div>
+ <span class="reel-card__num mono">08</span>
+ </button>
+ <button class="reel-card" data-i="8" aria-label="Long Form">
+ <video class="reel-card__video" data-src="videos/v06.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+ <div class="reel-card__shade" aria-hidden="true"></div>
+ <span class="reel-card__num mono">09</span>
+ </button>
+ <button class="reel-card" data-i="9" aria-label="Editorial">
+ <video class="reel-card__video" data-src="videos/v07.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+ <div class="reel-card__shade" aria-hidden="true"></div>
+ <span class="reel-card__num mono">10</span>
+ </button>
+ <button class="reel-card" data-i="10" aria-label="Direction Cut">
+ <video class="reel-card__video" data-src="videos/v08.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+ <div class="reel-card__shade" aria-hidden="true"></div>
+ <span class="reel-card__num mono">11</span>
+ </button>
+ <button class="reel-card" data-i="11" aria-label="Variant Set">
+ <video class="reel-card__video" data-src="videos/v10.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+ <div class="reel-card__shade" aria-hidden="true"></div>
+ <span class="reel-card__num mono">12</span>
+ </button>
+ <button class="reel-card" data-i="12" aria-label="Lifestyle">
+ <video class="reel-card__video" data-src="videos/v15.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+ <div class="reel-card__shade" aria-hidden="true"></div>
+ <span class="reel-card__num mono">13</span>
+ </button>
+ <button class="reel-card" data-i="13" aria-label="Stylized">
+ <video class="reel-card__video" data-src="videos/v16.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+ <div class="reel-card__shade" aria-hidden="true"></div>
+ <span class="reel-card__num mono">14</span>
+ </button>
+ <button class="reel-card" data-i="14" aria-label="Cinematic">
+ <video class="reel-card__video" data-src="videos/v17.mp4" muted playsinline preload="metadata" aria-hidden="true"></video>
+ <div class="reel-card__shade" aria-hidden="true"></div>
+ <span class="reel-card__num mono">15</span>
+ </button>
+ </div>
+ </div>
+
+ <button class="reel-flow__nav reel-flow__nav--prev" data-prev aria-label="Previous reel">
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m15 18-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+ </button>
+ <button class="reel-flow__nav reel-flow__nav--next" data-next aria-label="Next reel">
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 18 6-6-6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+ </button>
+ </div>
+
+ <div class="reel-flow__hud">
+ <div class="reel-flow__progress" aria-hidden="true"><span class="reel-flow__progress-bar" data-progress></span></div>
+ <div class="reel-flow__hud-right">
+ <span class="reel-flow__time mono" data-time>00:00 / 00:00</span>
+ <button class="reel-flow__btn" data-mute aria-label="Toggle sound" aria-pressed="false">
+ <svg class="i-mute" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><line x1="22" y1="9" x2="16" y2="15"/><line x1="16" y1="9" x2="22" y2="15"/></svg>
+ <svg class="i-unmute" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+ </button>
+ <button class="reel-flow__btn" data-fullscreen aria-label="Fullscreen">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9V3h6M21 9V3h-6M3 15v6h6M21 15v6h-6"/></svg>
+ </button>
+ </div>
+ </div>
+ </section>
+
+ <!-- ───── stats ribbon ───── -->
+ <section class="stats" aria-label="Headline stats">
+ <div class="container">
+ <div class="stats__row" data-stagger>
+ <div class="stat" data-reveal="up">
+ <div class="stat__num">1 <span class="serif">team</span></div>
+ <div class="stat__label">Production + Performance</div>
+ </div>
+ <div class="stat" data-reveal="up">
+ <div class="stat__num">10+</div>
+ <div class="stat__label">Growth industries</div>
+ </div>
+ <div class="stat" data-reveal="up">
+ <div class="stat__num">↓ CAC</div>
+ <div class="stat__label">Built for conversion</div>
+ </div>
+ <div class="stat" data-reveal="up">
+ <div class="stat__num">↑ ROAS</div>
+ <div class="stat__label">Compounding monthly</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ───── marquee ───── -->
+ <section class="marquee" aria-hidden="true">
+ <div class="marquee__track">
+ <span class="marquee__item">Ad <span class="serif">films</span></span>
+ <span class="marquee__item">Performance creative</span>
+ <span class="marquee__item">AI content <span class="serif">engines</span></span>
+ <span class="marquee__item">Brand shoots</span>
+ <span class="marquee__item">Real estate films</span>
+ <span class="marquee__item">UGC <span class="serif">systems</span></span>
+ <span class="marquee__item">Landing page creative</span>
+ <span class="marquee__item">Positioning</span>
+ <!-- duplicate for seamless loop -->
+ <span class="marquee__item">Ad <span class="serif">films</span></span>
+ <span class="marquee__item">Performance creative</span>
+ <span class="marquee__item">AI content <span class="serif">engines</span></span>
+ <span class="marquee__item">Brand shoots</span>
+ <span class="marquee__item">Real estate films</span>
+ <span class="marquee__item">UGC <span class="serif">systems</span></span>
+ <span class="marquee__item">Landing page creative</span>
+ <span class="marquee__item">Positioning</span>
+ </div>
+ </section>
+
+ <!-- ───── what we do ───── -->
+ <section id="what-we-do" class="section">
+ <div class="container">
+ <div class="section__head">
+ <span class="section__num" data-reveal>01 What we do</span>
+ <h2 class="h1" data-reveal>Ad films. Performance creative.<br /><span class="serif text-orange">AI content systems</span>.</h2>
+ <p class="lead" data-reveal>One integrated production + performance team. Built for conversion where cinematics, storytelling, and marketing intent work together to drive results.</p>
+ </div>
+
+ <div class="tri" data-stagger>
+ <article class="card" data-reveal="up">
+ <div class="card__index">/01</div>
+ <div class="card__icon" aria-hidden="true">
+ <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m9 8 6 4-6 4V8z" fill="currentColor"/></svg>
+ </div>
+ <h3 class="h3">Ad <span class="serif">Films</span></h3>
+ <p>Meta ad films and brand films engineered for scroll-stopping performance directed and shot with media intent in every frame.</p>
+ </article>
+
+ <article class="card" data-reveal="up">
+ <div class="card__index">/02</div>
+ <div class="card__icon" aria-hidden="true">
+ <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m7 14 3-3 3 3 5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+ </div>
+ <h3 class="h3">Performance <span class="serif">Creative</span></h3>
+ <p>Multi-variant video, static, and UGC production systems designed to learn, iterate, and scale winning hooks across the funnel.</p>
+ </article>
+
+ <article class="card" data-reveal="up">
+ <div class="card__index">/03</div>
+ <div class="card__icon" aria-hidden="true">
+ <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M5 19l3-3M16 8l3-3"/></svg>
+ </div>
+ <h3 class="h3">AI Content <span class="serif">Systems</span></h3>
+ <p>AI pipelines that expand production capacity generating variations, testing faster, and scaling winning formats continuously.</p>
+ </article>
+ </div>
+ </div>
+ </section>
+
+ <!-- ───── behind the scenes ───── -->
+ <section id="bts" class="bts-section" aria-labelledby="bts-heading">
+ <div class="section__head bts-section__head">
+ <span class="section__num" data-reveal>02b Behind the scenes</span>
+ <h2 class="h1" id="bts-heading" data-reveal>From <span class="serif text-orange">idea</span> to ad.</h2>
+ <p class="lead" data-reveal>Raw frames from production days directing, lighting, framing, and the small calls that decide whether a film performs.</p>
+ </div>
+
+ <div class="bts__collage" data-stagger>
+ <div class="bts-clip bts-clip--hero bts-clip--bw" data-reveal="up">
+ <video class="bts-clip__video" data-lazyvideo="videos/bts/DSC_3921.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+ </div>
+ <div class="bts-clip bts-clip--tall" data-reveal="up">
+ <video class="bts-clip__video" data-lazyvideo="videos/bts/DSC_3923.MOV#t=1" muted playsinline preload="none" data-still aria-hidden="true"></video>
+ </div>
+ <div class="bts-clip bts-clip--bw" data-reveal="up">
+ <video class="bts-clip__video" data-lazyvideo="videos/bts/DSC_3925.MOV#t=0.6" muted playsinline preload="none" data-still aria-hidden="true"></video>
+ </div>
+ <div class="bts-clip" data-reveal="up">
+ <video class="bts-clip__video" data-lazyvideo="videos/bts/DSC_3927.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+ </div>
+ <div class="bts-clip" data-reveal="up">
+ <video class="bts-clip__video" data-lazyvideo="videos/bts/DSC_3929.MOV#t=1.2" muted playsinline preload="none" data-still aria-hidden="true"></video>
+ </div>
+ <div class="bts-clip bts-clip--wide bts-clip--bw" data-reveal="up">
+ <video class="bts-clip__video" data-lazyvideo="videos/bts/DSC_3931.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+ </div>
+ <div class="bts-clip" data-reveal="up">
+ <video class="bts-clip__video" data-lazyvideo="videos/bts/DSC_3933.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+ </div>
+ <div class="bts-clip bts-clip--bw" data-reveal="up">
+ <video class="bts-clip__video" data-lazyvideo="videos/bts/DSC_3935.MOV#t=0.8" muted playsinline preload="none" data-still aria-hidden="true"></video>
+ </div>
+ <div class="bts-clip bts-clip--wide" data-reveal="up">
+ <video class="bts-clip__video" data-lazyvideo="videos/bts/DSC_3936.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+ </div>
+ </div>
+ </section>
+
+ <!-- ───── with celebrities ───── -->
+ <section id="celebs" class="celebs-section" aria-labelledby="celebs-heading">
+ <div class="section__head celebs-section__head">
+ <span class="section__num" data-reveal>02c In good company</span>
+ <h2 class="h1" id="celebs-heading" data-reveal>Working with <span class="serif text-orange">the names</span> people watch.</h2>
+ <p class="lead" data-reveal>Talent that already commands attention captured for films built to convert.</p>
+ </div>
+
+ <div class="celebs__collage" data-stagger>
+ <div class="celeb-tile" data-reveal="up">
+ <video class="celeb-tile__media" data-lazyvideo="celebs/video_20240215_034228.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+ </div>
+ <div class="celeb-tile" data-reveal="up">
+ <video class="celeb-tile__media" data-lazyvideo="celebs/video_20240304_154656.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+ </div>
+ <div class="celeb-tile" data-reveal="up">
+ <video class="celeb-tile__media" data-lazyvideo="celebs/video_20240304_124711.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+ </div>
+ <div class="celeb-tile" data-reveal="up">
+ <img class="celeb-tile__media" src="celebs/IMG_20240225_081226.jpg" alt="" loading="lazy" />
+ </div>
+ <div class="celeb-tile" data-reveal="up">
+ <img class="celeb-tile__media" src="celebs/IMG_20241106_101537.jpg" alt="" loading="lazy" />
+ </div>
+ <div class="celeb-tile" data-reveal="up">
+ <img class="celeb-tile__media" src="celebs/IMG_20240629_003104.jpg" alt="" loading="lazy" />
+ </div>
+ <div class="celeb-tile" data-reveal="up">
+ <img class="celeb-tile__media" src="celebs/IMG_20241212_012956.jpg" alt="" loading="lazy" />
+ </div>
+ <div class="celeb-tile" data-reveal="up">
+ <img class="celeb-tile__media" src="celebs/IMG_20240913_190140.jpg" alt="" loading="lazy" />
+ </div>
+ <div class="celeb-tile" data-reveal="up">
+ <img class="celeb-tile__media" src="celebs/IMG_20240627_015439.jpg" alt="" loading="lazy" />
+ </div>
+ <div class="celeb-tile" data-reveal="up">
+ <img class="celeb-tile__media" src="celebs/dee817bc-122a-42d5-b262-a4ea7149968f.jpg" alt="" loading="lazy" />
+ </div>
+ </div>
+ </section>
+
+ <!-- ───── industries ───── -->
+ <section id="industries" class="section">
+ <div class="container">
+ <div class="section__head">
+ <span class="section__num" data-reveal>03 Industries</span>
+ <h2 class="h1" data-reveal>High-performance categories.<br /><span class="serif text-muted" style="font-weight:400;">Same objective: performance through content.</span></h2>
+ </div>
+
+ <div class="industries" data-stagger>
+ <div class="industry" data-reveal="up">
+ <div class="industry__title">Ecommerce / D2C</div>
+ <div class="industry__sub">CAC reduction, ROAS scaling, repeat purchases</div>
+ </div>
+ <div class="industry" data-reveal="up">
+ <div class="industry__title">Real Estate</div>
+ <div class="industry__sub">Site visits, lead quality, bookings</div>
+ </div>
+ <div class="industry" data-reveal="up">
+ <div class="industry__title">Luxury Brands</div>
+ <div class="industry__sub">Perception building + high-value conversions</div>
+ </div>
+ <div class="industry" data-reveal="up">
+ <div class="industry__title">Education / EdTech</div>
+ <div class="industry__sub">Enrollments, applications, admissions</div>
+ </div>
+ <div class="industry" data-reveal="up">
+ <div class="industry__title">Hospitality</div>
+ <div class="industry__sub">Footfall, bookings, occupancy lift</div>
+ </div>
+ <div class="industry" data-reveal="up">
+ <div class="industry__title">Healthcare / Clinics</div>
+ <div class="industry__sub">Patient acquisition, trust-building campaigns</div>
+ </div>
+ <div class="industry" data-reveal="up">
+ <div class="industry__title">Automotive</div>
+ <div class="industry__sub">Test drives, dealership conversions</div>
+ </div>
+ <div class="industry" data-reveal="up">
+ <div class="industry__title">Apps / SaaS</div>
+ <div class="industry__sub">Installs, signups, activation</div>
+ </div>
+ <div class="industry" data-reveal="up">
+ <div class="industry__title">Retail / Offline</div>
+ <div class="industry__sub">Store visits, local conversions</div>
+ </div>
+ <div class="industry" data-reveal="up">
+ <div class="industry__title">Fintech / Finance</div>
+ <div class="industry__sub">Lead gen, acquisition funnels</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ───── deliverables ───── -->
+ <section id="deliver" class="section section--tight" style="padding-top:0;">
+ <div class="container">
+ <div class="section__head">
+ <span class="section__num" data-reveal>04 What we deliver</span>
+ <h2 class="h1" data-reveal>Structured <span class="serif text-orange">video-first</span> growth systems.</h2>
+ <p class="lead" data-reveal>Every output is designed through production + performance thinking turning attention into measurable outcomes from first-frame hook to final conversion.</p>
+ </div>
+
+ <div class="deliverables" data-stagger>
+ <div class="deliverable" data-reveal="up"><div class="deliverable__num">01</div><div class="deliverable__title">Meta ad films engineered for scroll-stopping performance</div></div>
+ <div class="deliverable" data-reveal="up"><div class="deliverable__num">02</div><div class="deliverable__title">Performance creatives video, static, and UGC production systems</div></div>
+ <div class="deliverable" data-reveal="up"><div class="deliverable__num">03</div><div class="deliverable__title">Product & brand shoots designed for conversion, not just aesthetics</div></div>
+ <div class="deliverable" data-reveal="up"><div class="deliverable__num">04</div><div class="deliverable__title">Full-funnel campaign design from awareness to conversion</div></div>
+ <div class="deliverable" data-reveal="up"><div class="deliverable__num">05</div><div class="deliverable__title">Real estate & offline footfall video campaigns</div></div>
+ <div class="deliverable" data-reveal="up"><div class="deliverable__num">06</div><div class="deliverable__title">Ecommerce scaling creative systems with multi-variant production</div></div>
+ <div class="deliverable" data-reveal="up"><div class="deliverable__num">07</div><div class="deliverable__title">Website + landing page creatives aligned with ad narratives</div></div>
+ <div class="deliverable" data-reveal="up"><div class="deliverable__num">08</div><div class="deliverable__title">Brand positioning that reduces CAC and improves conversion rate</div></div>
+ <div class="deliverable" data-reveal="up"><div class="deliverable__num">09</div><div class="deliverable__title">AI-driven content engines for scalable variations and testing</div></div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ───── outcomes ───── -->
+ <section class="section">
+ <div class="container">
+ <div class="section__head">
+ <span class="section__num" data-reveal>05 What brands actually get</span>
+ <h2 class="h1" data-reveal>Real outputs. <span class="serif text-orange">Real numbers</span>.</h2>
+ </div>
+
+ <div class="outcomes" data-stagger>
+ <div class="outcome" data-reveal="up">
+ <div class="outcome__head">
+ <div class="outcome__metric"><span class="outcome__arrow">↓</span> CAC</div>
+ <div class="outcome__delta"><span class="pos">−38%</span> · 90d</div>
+ </div>
+ <div class="outcome__label">Lower customer acquisition cost across paid channels.</div>
+ <svg class="outcome__spark outcome__spark--green" viewBox="0 0 100 48" preserveAspectRatio="none" aria-hidden="true">
+ <polyline points="0,10 12,14 24,12 36,22 48,18 60,28 72,30 84,38 100,40"
+ fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+ <polyline points="0,10 12,14 24,12 36,22 48,18 60,28 72,30 84,38 100,40 100,48 0,48"
+ fill="currentColor" opacity="0.10" stroke="none"/>
+ </svg>
+ </div>
+ <div class="outcome" data-reveal="up">
+ <div class="outcome__head">
+ <div class="outcome__metric"><span class="outcome__arrow">↑</span> ROAS</div>
+ <div class="outcome__delta"><span class="neg">+360%</span> · q3</div>
+ </div>
+ <div class="outcome__label">Higher return on ad spend, compounding over time.</div>
+ <svg class="outcome__spark" viewBox="0 0 100 48" preserveAspectRatio="none" aria-hidden="true">
+ <polyline points="0,38 12,34 24,28 36,30 48,22 60,20 72,12 84,10 100,4"
+ fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+ <polyline points="0,38 12,34 24,28 36,30 48,22 60,20 72,12 84,10 100,4 100,48 0,48"
+ fill="currentColor" opacity="0.12" stroke="none"/>
+ </svg>
+ </div>
+ <div class="outcome" data-reveal="up">
+ <div class="outcome__head">
+ <div class="outcome__metric"><span class="outcome__arrow">↑</span> QL</div>
+ <div class="outcome__delta"><span class="neg">+62%</span> · 60d</div>
+ </div>
+ <div class="outcome__label">Qualified leads not just leads. With intent to convert.</div>
+ <svg class="outcome__spark" viewBox="0 0 100 48" preserveAspectRatio="none" aria-hidden="true">
+ <polyline points="0,32 12,30 24,26 36,22 48,24 60,18 72,14 84,10 100,8"
+ fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+ <polyline points="0,32 12,30 24,26 36,22 48,24 60,18 72,14 84,10 100,8 100,48 0,48"
+ fill="currentColor" opacity="0.12" stroke="none"/>
+ </svg>
+ </div>
+ <div class="outcome" data-reveal="up">
+ <div class="outcome__head">
+ <div class="outcome__metric"><span class="outcome__arrow">↑</span> Visits</div>
+ <div class="outcome__delta"><span class="neg">+2.8×</span> · in-store</div>
+ </div>
+ <div class="outcome__label">Store and site traffic from people ready to buy.</div>
+ <svg class="outcome__spark" viewBox="0 0 100 48" preserveAspectRatio="none" aria-hidden="true">
+ <polyline points="0,40 12,38 24,30 36,32 48,22 60,24 72,16 84,12 100,6"
+ fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+ <polyline points="0,40 12,38 24,30 36,32 48,22 60,24 72,16 84,12 100,6 100,48 0,48"
+ fill="currentColor" opacity="0.12" stroke="none"/>
+ </svg>
+ </div>
+ <div class="outcome" data-reveal="up">
+ <div class="outcome__head">
+ <div class="outcome__metric"><span class="outcome__arrow">↑</span> CVR</div>
+ <div class="outcome__delta"><span class="neg">+19%</span> · funnel</div>
+ </div>
+ <div class="outcome__label">Better narrative-to-landing alignment across funnels.</div>
+ <svg class="outcome__spark" viewBox="0 0 100 48" preserveAspectRatio="none" aria-hidden="true">
+ <polyline points="0,30 12,28 24,24 36,28 48,20 60,18 72,16 84,12 100,10"
+ fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+ <polyline points="0,30 12,28 24,24 36,28 48,20 60,18 72,16 84,12 100,10 100,48 0,48"
+ fill="currentColor" opacity="0.12" stroke="none"/>
+ </svg>
+ </div>
+ <div class="outcome" data-reveal="up">
+ <div class="outcome__head">
+ <div class="outcome__metric"><span class="outcome__arrow">↑</span> Recall</div>
+ <div class="outcome__delta"><span class="neg">+27%</span> · brand lift</div>
+ </div>
+ <div class="outcome__label">Stronger creative memory in crowded categories.</div>
+ <svg class="outcome__spark" viewBox="0 0 100 48" preserveAspectRatio="none" aria-hidden="true">
+ <polyline points="0,42 12,38 24,32 36,28 48,30 60,22 72,18 84,12 100,6"
+ fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+ <polyline points="0,42 12,38 24,32 36,28 48,30 60,22 72,18 84,12 100,6 100,48 0,48"
+ fill="currentColor" opacity="0.12" stroke="none"/>
+ </svg>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ornamental divider -->
+ <div class="container">
+ <div class="divider-orn"><span class="divider-orn__star">✦</span> Why it works <span class="divider-orn__star">✦</span></div>
+ </div>
+
+ <!-- ───── why it works ───── -->
+ <section class="section">
+ <div class="container">
+ <div class="why">
+ <div data-reveal="left">
+ <span class="section__num">06 Why it works</span>
+ <h2 class="h1" style="margin-top:18px;">Most marketing is split. <span class="serif text-orange">We collapse</span> that.</h2>
+ <p class="lead" style="margin-top:18px;">Creative gets shot in isolation. Media gets run in isolation. Strategy is decided separately. Execution is disconnected. Our work is powered by a single integrated system.</p>
+ <div class="why__pills">
+ <span class="pill pill--primary">Production</span>
+ <span class="pill pill--primary">Design</span>
+ <span class="pill pill--primary">Marketing</span>
+ <span class="pill pill--primary">AI</span>
+ </div>
+ </div>
+
+ <ul class="split-list" data-stagger>
+ <li data-reveal="right">
+ <div></div>
+ <div>
+ <strong>Same team owns numbers and frames.</strong>
+ <span>The people who understand your performance also decide what gets filmed.</span>
+ </div>
+ </li>
+ <li data-reveal="right">
+ <div></div>
+ <div>
+ <strong>Shoots informed by media reality.</strong>
+ <span>The same crew that shoots your ads knows how each cut will perform in the feed.</span>
+ </div>
+ </li>
+ <li data-reveal="right">
+ <div></div>
+ <div>
+ <strong>Systems learn every cycle.</strong>
+ <span>Hooks, edits, formats, and narratives are refined continuously not monthly.</span>
+ </div>
+ </li>
+ </ul>
+ </div>
+ </div>
+ </section>
+
+ <!-- ───── process timeline ───── -->
+ <section id="process" class="section section--tight" style="padding-top:0;">
+ <div class="container">
+ <div class="section__head">
+ <span class="section__num" data-reveal>07 How we work</span>
+ <h2 class="h1" data-reveal>Four moves. One <span class="serif text-orange">compounding</span> system.</h2>
+ <p class="lead" data-reveal>The same team carries the brand from positioning to production to performance no handoffs, no lost context.</p>
+ </div>
+
+ <div class="process" data-stagger>
+ <div class="step" data-reveal="up">
+ <div class="step__dot">01</div>
+ <div class="step__body">
+ <div class="step__title">Position before you produce.</div>
+ <div class="step__desc">We tighten positioning first because no production saves a brand that&rsquo;s hard to buy. Sixty percent of the outcome is decided here.</div>
+ </div>
+ </div>
+ <div class="step" data-reveal="up">
+ <div class="step__dot">02</div>
+ <div class="step__body">
+ <div class="step__title">Shoot for the sales, not the boardroom.</div>
+ <div class="step__desc">Direction, lighting and camera work are designed around hooks and formats that drive conversions cinematics that move product, not just impress rooms.</div>
+ </div>
+ </div>
+ <div class="step" data-reveal="up">
+ <div class="step__dot">03</div>
+ <div class="step__body">
+ <div class="step__title">Variate with AI, not vanity.</div>
+ <div class="step__desc">AI pipelines generate the long tail of variations from each shoot every winning frame turns into ten more tests in market.</div>
+ </div>
+ </div>
+ <div class="step" data-reveal="up">
+ <div class="step__dot">04</div>
+ <div class="step__body">
+ <div class="step__title">Learn every cycle, compound monthly.</div>
+ <div class="step__desc">Performance data flows back into the next shoot brief. Your video system gets better while it runs.</div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <!-- ───── how we think (positioning) ───── -->
+ <section class="section section--tight" style="padding-top:0;">
+ <div class="container">
+ <div class="narrative" data-reveal>
+ <span class="section__num">08 How we think about your brand</span>
+ <h2 class="h1" style="margin-top:18px;">Most brands try to sell harder.<br /><span class="serif text-orange">We make the brand easier to buy</span>.</h2>
+ <p style="margin-top:20px; font-size:17px;">
+ We are obsessively focused on creative direction, filmmaking, and design not as decoration, but as performance leverage.
+ Positioning decides most of the outcome before the camera even rolls.
+ </p>
+ <ul>
+ <li><strong>Positioning is 60% of the game.</strong> If it&rsquo;s weak, no production saves it.</li>
+ <li><strong>If it&rsquo;s strong, even simple films outperform.</strong></li>
+ <li><strong>We fix positioning before we scale production.</strong></li>
+ </ul>
+ </div>
+ </div>
+ </section>
+
+ <!-- ───── team ───── -->
+ <section id="team" class="section">
+ <div class="container">
+ <div class="section__head">
+ <span class="section__num" data-reveal>09 The people behind the outcomes</span>
+ <h2 class="h1" data-reveal>Design. Film. Performance. <span class="serif text-orange">AI</span>.</h2>
+ <p class="lead" data-reveal>Specialists in each domain working as one production system.</p>
+ </div>
+
+ <div class="team" data-stagger>
+ <article class="member" data-reveal="up">
+ <img class="member__photo" src="team/prithvie.jpg" alt="Prithvie" loading="lazy" />
+ <div class="member__body">
+ <div class="member__name">Prithvie</div>
+ <div class="member__role">Performance × Narrative</div>
+ <div class="member__bio">Builds ad narratives that hold attention on screen and convert it.</div>
+ </div>
+ </article>
+
+ <article class="member" data-reveal="up">
+ <img class="member__photo member__photo--tight" src="team/shubham.jpg" alt="Shubham" loading="lazy" />
+ <div class="member__body">
+ <div class="member__name">Shubham</div>
+ <div class="member__role">Design × AI Systems</div>
+ <div class="member__bio">Builds visual systems and AI pipelines that scale creative production.</div>
+ </div>
+ </article>
+
+ <article class="member" data-reveal="up">
+ <img class="member__photo" src="team/aman-direction.jpg" alt="Aman" loading="lazy" />
+ <div class="member__body">
+ <div class="member__name">Aman</div>
+ <div class="member__role">Ad Films × Direction</div>
+ <div class="member__bio">Directs and shoots ad films that feel cinematic but perform like media assets.</div>
+ </div>
+ </article>
+
+ <article class="member" data-reveal="up">
+ <img class="member__photo" src="team/bunty.jpg" alt="Bunty" loading="lazy" />
+ <div class="member__body">
+ <div class="member__name">Bunty</div>
+ <div class="member__role">Photography × Set Design</div>
+ <div class="member__bio">Creates product and brand shoots built for conversion-driven storytelling.</div>
+ </div>
+ </article>
+
+ <article class="member" data-reveal="up">
+ <img class="member__photo" src="team/sanaya.jpg" alt="Sanaya" loading="lazy" />
+ <div class="member__body">
+ <div class="member__name">Sanaya</div>
+ <div class="member__role">Creative Direction × Styling</div>
+ <div class="member__bio">Shapes visual identity across every frame, shoot, and campaign.</div>
+ </div>
+ </article>
+
+ <article class="member" data-reveal="up">
+ <img class="member__photo" src="team/vibhuti.jpg" alt="Vibhuti" loading="lazy" />
+ <div class="member__body">
+ <div class="member__name">Vibhuti</div>
+ <div class="member__role">Creative Direction × Styling</div>
+ <div class="member__bio">Ensures consistency across all visual production systems and outputs.</div>
+ </div>
+ </article>
+
+ <article class="member" data-reveal="up">
+ <img class="member__photo" src="team/aman-lighting.jpg" alt="Aman" loading="lazy" />
+ <div class="member__body">
+ <div class="member__name">Aman</div>
+ <div class="member__role">Lighting × Color</div>
+ <div class="member__bio">Controls the final layer of cinematic quality that defines premium perception.</div>
+ </div>
+ </article>
+
+ <article class="member" data-reveal="up">
+ <img class="member__photo" src="team/aryan.jpg" alt="Aryan" loading="lazy" />
+ <div class="member__body">
+ <div class="member__name">Aryan</div>
+ <div class="member__role">Ad Film Direction × Production</div>
+ <div class="member__bio">Creates high-impact commercial shoots engineered for brand recall and visual storytelling.</div>
+ </div>
+ </article>
+ </div>
+ </div>
+ </section>
+
+ <!-- ───── why brands switch ───── -->
+ <section class="section section--tight" style="padding-top:0;">
+ <div class="container">
+ <div class="narrative" data-reveal>
+ <span class="section__num">10 Why brands switch to MetIQ</span>
+ <h2 class="h1" style="margin-top:18px;">Most brands come to us in <span class="serif text-orange">two stages</span>.</h2>
+ <p style="margin-top:18px; font-size:17px;">
+ At the start, to scale. Or after they&rsquo;ve already tried everything production teams that made beautiful videos that didn&rsquo;t convert, performance teams that ran ads without strong creatives, internal teams that couldn&rsquo;t sustain consistent output.
+ </p>
+ <p style="margin-top:14px; font-size:17px; color: var(--fg);">
+ What they&rsquo;re left with is the same problem: <strong>effort is high, output is low, results are inconsistent.</strong>
+ </p>
+ </div>
+ </div>
+ </section>
+
+ <!-- ───── lens ───── -->
+ <section id="lens" class="section">
+ <div class="container">
+ <div class="section__head">
+ <span class="section__num" data-reveal>11 Our Lens</span>
+ <h2 class="h1" data-reveal>How we read brands and <span class="serif text-orange">markets</span>.</h2>
+ </div>
+
+ <div class="lens-grid" data-stagger>
+ <article class="lens-card" data-reveal="up">
+ <div class="lens-card__num">01 CONSISTENCY</div>
+ <p>Most brands confuse consistency with repetition. <span class="serif">Real consistency</span> is the stability of meaning across time, not the repetition of the same output.</p>
+ </article>
+ <article class="lens-card" data-reveal="up">
+ <div class="lens-card__num">02 RELEVANCE</div>
+ <p>Relevance is not about <span class="serif">chasing trends</span> it&rsquo;s about continuously adjusting how your brand fits into what people already believe matters in that moment.</p>
+ </article>
+ <article class="lens-card" data-reveal="up">
+ <div class="lens-card__num">03 REFINEMENT</div>
+ <p>The strongest brands don&rsquo;t frequently change what they say. They <span class="serif">refine</span> how it lands as attention, context, and culture shift around them.</p>
+ </article>
+ <article class="lens-card" data-reveal="up">
+ <div class="lens-card__num">04 CREATIVE MEMORY</div>
+ <p>Markets don&rsquo;t reward creativity in isolation. They reward <span class="serif">creative memory</span> the ease with which people recognize and recall you without effort.</p>
+ </article>
+ <article class="lens-card" data-reveal="up">
+ <div class="lens-card__num">05 FATIGUE</div>
+ <p>Over time, inconsistency doesn&rsquo;t create noise. It creates <span class="serif">cognitive fatigue</span>, where people stop engaging without even realizing why.</p>
+ </article>
+ <article class="lens-card" data-reveal="up">
+ <div class="lens-card__num">06 DECAY</div>
+ <p>Relevance rarely breaks suddenly; it <span class="serif">decays quietly</span>. That&rsquo;s why most brands only notice it after performance drops.</p>
+ </article>
+ </div>
+ </div>
+ </section>
+
+ <!-- ───── faq ───── -->
+ <section id="faq" class="section">
+ <div class="container">
+ <div class="section__head">
+ <span class="section__num" data-reveal>12 FAQ</span>
+ <h2 class="h1" data-reveal>Frequently asked <span class="serif text-orange">questions</span>.</h2>
+ </div>
+
+ <div class="faq" data-stagger>
+ <details class="faq__item" data-reveal="up">
+ <summary class="faq__q">
+ <span>Do you work with brands at any stage, or only at scale?</span>
+ <svg class="faq__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>
+ </summary>
+ <div class="faq__a">
+ We work with brands at the start when they&rsquo;re scaling, and with brands that have already tried multiple production or performance teams without consistent outcomes. Both stages benefit from a single integrated system.
+ </div>
+ </details>
+
+ <details class="faq__item" data-reveal="up">
+ <summary class="faq__q">
+ <span>What does an integrated production + performance team actually mean?</span>
+ <svg class="faq__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>
+ </summary>
+ <div class="faq__a">
+ The same team that understands your numbers is involved in what gets filmed. The same people who shoot your ads know exactly how they will perform in media. Decisions are not handed off across vendors.
+ </div>
+ </details>
+
+ <details class="faq__item" data-reveal="up">
+ <summary class="faq__q">
+ <span>How do you use AI in the production process?</span>
+ <svg class="faq__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>
+ </summary>
+ <div class="faq__a">
+ AI expands production capacity it doesn&rsquo;t replace creativity. We use it to generate variations, test faster, and scale winning formats. Your video system keeps improving even while running.
+ </div>
+ </details>
+
+ <details class="faq__item" data-reveal="up">
+ <summary class="faq__q">
+ <span>What outcomes can I expect to measure?</span>
+ <svg class="faq__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>
+ </summary>
+ <div class="faq__a">
+ Lower CAC, higher ROAS, qualified leads, store and site visits with intent, conversion rate across funnels, and brand recall in crowded categories. We design for measurable outputs, not vanity metrics.
+ </div>
+ </details>
+
+ <details class="faq__item" data-reveal="up">
+ <summary class="faq__q">
+ <span>Do you fix positioning, or only execute production?</span>
+ <svg class="faq__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>
+ </summary>
+ <div class="faq__a">
+ We fix positioning first. Positioning is roughly 60% of the outcome if it&rsquo;s weak, no production saves it. Once positioning is stable, we scale production around it.
+ </div>
+ </details>
+
+ <details class="faq__item" data-reveal="up">
+ <summary class="faq__q">
+ <span>Which industries do you work with?</span>
+ <svg class="faq__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>
+ </summary>
+ <div class="faq__a">
+ Ecommerce/D2C, real estate, luxury, education, hospitality, healthcare, automotive, apps/SaaS, retail, and fintech any category where attention has to convert into measurable outcomes.
+ </div>
+ </details>
+ </div>
+ </div>
+ </section>
+
+ </main>
+
+ <!-- ───── final CTA ───── -->
+ <section id="talk" class="cta-band">
+ <div class="container">
+ <span class="section__num" data-reveal>13 Talk to MetIQ</span>
+ <h2 class="h-display" style="margin-top:24px;" data-reveal>Let&rsquo;s build video content that <span class="serif text-orange">actually grows</span> your brand.</h2>
+ <p class="lead" style="margin: 22px auto 0;" data-reveal>One conversation. We&rsquo;ll show you what your funnel looks like with production + performance + AI as a single system.</p>
+ <a href="mailto:hello@metiq.in" class="btn btn--primary btn--lg" data-reveal>
+ Start the conversation <span class="arrow" aria-hidden="true">→</span>
+ </a>
+ </div>
+ </section>
+
+ <!-- ───── footer ───── -->
+ <footer class="footer">
+ <div class="container">
+ <div class="footer__grid">
+ <div>
+ <a href="#top" class="brand" aria-label="MetIQ">
+ <svg class="brand__wordmark" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+ <defs>
+ <linearGradient id="brandSilverFooter" x1="0" y1="0" x2="0" y2="1">
+ <stop offset="0%" stop-color="#FFFFFF"/>
+ <stop offset="40%" stop-color="#E8E8EC"/>
+ <stop offset="100%" stop-color="#6E6E78"/>
+ </linearGradient>
+ </defs>
+ <text x="0" y="46" font-family="Funnel Display,Sora,system-ui,sans-serif" font-weight="800" font-size="48" letter-spacing="-2.2" fill="#FFFFFF">Met<tspan fill="url(#brandSilverFooter)">IQ</tspan></text>
+ </svg>
+ </a>
+ <p class="text-muted" style="margin-top:14px; max-width:38ch; font-size:14px;">
+ Ad films, performance creative, and AI content systems built for brands that <span class="serif text-cream">measure outcomes</span>.
+ </p>
+ </div>
+
+ <div>
+ <h4>Company</h4>
+ <ul>
+ <li><a href="#what-we-do">What we do</a></li>
+ <li><a href="#team">Team</a></li>
+ <li><a href="#lens">Our Lens</a></li>
+ </ul>
+ </div>
+
+ <div>
+ <h4>Work</h4>
+ <ul>
+ <li><a href="#work">Selected work</a></li>
+ <li><a href="#bts">Behind the scenes</a></li>
+ <li><a href="#deliver">Deliverables</a></li>
+ <li><a href="#process">Process</a></li>
+ </ul>
+ </div>
+
+ <div>
+ <h4>Contact</h4>
+ <ul>
+ <li><a href="mailto:hello@metiq.in">hello@metiq.in</a></li>
+ <li><a href="#talk">Talk to MetIQ</a></li>
+ </ul>
+ </div>
+ </div>
+
+ <div class="footer__wordmark" aria-hidden="true">METIQ</div>
+
+ <div class="footer__bottom">
+ <span>© <span id="yr">2026</span> · MetIQ</span>
+ <span>Production × Performance × AI</span>
+ </div>
+ </div>
+ </footer>
+
+ <script src="script.js"></script>
+ <script src="animations.js"></script>
+ <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+</body>
+</html>
