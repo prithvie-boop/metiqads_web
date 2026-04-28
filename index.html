@@ -49,7 +49,7 @@
  </nav>
 
  <div class="nav__cta">
- <a href="#talk" class="btn btn--primary">Talk to MetIQ</a>
+ <a href="#talk" class="btn btn--primary" data-open-form>Talk to MetIQ</a>
  <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
  <path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round" />
@@ -82,7 +82,7 @@
  For brands that need more sales, more traffic, more walk-ins, stronger recall, and higher conversions across every <span class="serif text-cream">serious</span> growth industry.
  </p>
  <div class="hero__cta">
- <a href="#talk" class="btn btn--primary btn--lg">
+ <a href="#talk" class="btn btn--primary btn--lg" data-open-form>
  Talk to MetIQ <span class="arrow" aria-hidden="true">→</span>
  </a>
  <a href="#what-we-do" class="btn btn--ghost btn--lg">See what we build</a>
@@ -849,7 +849,7 @@
  <span class="section__num" data-reveal>13 Talk to MetIQ</span>
  <h2 class="h-display" style="margin-top:24px;" data-reveal>Let&rsquo;s build video content that <span class="serif text-orange">actually grows</span> your brand.</h2>
  <p class="lead" style="margin: 22px auto 0;" data-reveal>One conversation. We&rsquo;ll show you what your funnel looks like with production + performance + AI as a single system.</p>
- <a href="mailto:prithvie@metiqads.com" class="btn btn--primary btn--lg" data-reveal>
+ <a href="mailto:prithvie@metiqads.com" class="btn btn--primary btn--lg" data-reveal data-open-form>
  Start the conversation <span class="arrow" aria-hidden="true">→</span>
  </a>
  </div>
@@ -900,7 +900,7 @@
  <h4>Contact</h4>
  <ul>
  <li><a href="mailto:prithvie@metiqads.com">prithvie@metiqads.com</a></li>
- <li><a href="#talk">Talk to MetIQ</a></li>
+ <li><a href="#talk" data-open-form>Talk to MetIQ</a></li>
  </ul>
  </div>
  </div>
@@ -914,8 +914,76 @@
  </div>
  </footer>
 
+ <!-- ───── intake form (full-viewport overlay) ───── -->
+ <aside class="intake" id="intake" aria-hidden="true" aria-labelledby="intake-title" role="dialog">
+ <div class="intake__bg" aria-hidden="true"></div>
+ <button class="intake__close" type="button" aria-label="Close form" data-close-form>
+ <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6l-12 12" stroke-linecap="round"/></svg>
+ </button>
+
+ <div class="intake__inner">
+ <span class="section__num">14 Project intake</span>
+ <h2 id="intake-title" class="h-display">Tell us about your <span class="serif text-orange">brand</span>.</h2>
+ <p class="lead intake__lead">A few details and we&rsquo;ll get back within 24 hours with a tailored plan.</p>
+
+ <form class="intake__form" id="intake-form" novalidate autocomplete="on">
+ <div class="intake__row">
+ <label class="intake__field">
+ <span class="intake__label">Your name <em>*</em></span>
+ <input type="text" name="name" required autocomplete="name" />
+ </label>
+ <label class="intake__field">
+ <span class="intake__label">Email <em>*</em></span>
+ <input type="email" name="email" required autocomplete="email" />
+ </label>
+ </div>
+
+ <div class="intake__row">
+ <label class="intake__field">
+ <span class="intake__label">Brand / company</span>
+ <input type="text" name="company" autocomplete="organization" />
+ </label>
+ <label class="intake__field">
+ <span class="intake__label">Budget range</span>
+ <select name="budget">
+ <option value="">Select a range</option>
+ <option>Under ₹2L</option>
+ <option>₹2L – ₹5L</option>
+ <option>₹5L – ₹15L</option>
+ <option>₹15L – ₹40L</option>
+ <option>₹40L+</option>
+ <option>Not sure yet</option>
+ </select>
+ </label>
+ </div>
+
+ <label class="intake__field intake__field--full">
+ <span class="intake__label">What do you want to build? <em>*</em></span>
+ <textarea name="project" rows="4" required placeholder="Ad film, performance creative system, AI content engine, launch campaign..."></textarea>
+ </label>
+
+ <input class="intake__honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+ <div class="intake__actions">
+ <button class="btn btn--primary btn--lg" type="submit" data-submit>
+ Send <span class="arrow" aria-hidden="true">→</span>
+ </button>
+ <span class="intake__status" data-status aria-live="polite"></span>
+ </div>
+ </form>
+
+ <div class="intake__success" data-success hidden>
+ <span class="section__num">Thanks</span>
+ <h3 class="h-display">Got it. We&rsquo;ll be in touch.</h3>
+ <p class="lead">Reply lands in your inbox within 24 hours, often sooner.</p>
+ <button type="button" class="btn btn--ghost btn--lg" data-close-form>Close</button>
+ </div>
+ </div>
+ </aside>
+
  <script src="script.js"></script>
  <script src="animations.js"></script>
+ <script src="form.js"></script>
  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
 </body>
 </html>
